@@ -1,0 +1,8 @@
+def reverse_string(s):
+    result = ""
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result
+
+# Example usage:
+print(reverse_string("hello"))
