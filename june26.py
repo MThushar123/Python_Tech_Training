@@ -1,0 +1,21 @@
+def lastRemaining(n):
+    head = 1
+    step = 1
+    remaining = n
+    left_to_right = True
+
+    while remaining > 1:
+        if left_to_right or remaining % 2 == 1:
+            head += step
+
+        remaining //= 2
+        step *= 2
+        left_to_right = not left_to_right
+
+    return head
+
+n = int(input("Enter the value of n: "))
+
+result = lastRemaining(n)
+
+print("Last Remaining Number:", result)
